@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+	int num,one,two,tree,four,five,six,sum,sun1,sun2,sun3,sud1,sud2,sud3;
+	scanf("%d",&num);
+	six=num%10;
+	five=num/10%10;
+	four=num/10/10%10;
+	tree=num/10/10/10%10;
+	two=num/10/10/10/10%10;
+	one=num/100000;
+	/*printf("one=%d\n",one);
+	printf("two=%d\n",two);
+	printf("tree=%d\n",tree);
+	printf("four=%d\n",four);
+	printf("five=%d\n",five);
+	printf("six=%d\n",six);*/
+	sum=one+two+tree+four+five+six;
+	if(sum<10)
+	{
+		printf("%d",sum); 
+	}
+	else 
+	{
+		sun1=sum/10;
+		sun2=sum%10;
+		sun3=sun1+sun2;	
+	}
+	if(sun3<10) 
+	{
+		printf("%d",sun3); 
+	}
+	else 
+	{
+		sud1=sun3/10;
+		sud2=sun3%10;
+		sud3=sud1+sud2;
+		printf("%d",sud3);	
+	}
+	return 0;
+}
